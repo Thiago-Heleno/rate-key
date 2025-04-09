@@ -1,0 +1,24 @@
+# Cline Rules: Rate Key Project
+
+## Project Intelligence & Patterns
+
+- **Memory Bank:** This project utilizes the Cline Memory Bank system. Core files (`projectbrief.md`, `productContext.md`, `activeContext.md`, `systemPatterns.md`, `techContext.md`, `progress.md`) MUST be read at the start of each session and updated as needed, especially `activeContext.md` and `progress.md`.
+- **Technology Stack:** Tauri (Rust backend) + React/TypeScript (Frontend) + Vite + shadcn/ui + Tailwind CSS + react-hook-form + Zod.
+- **UI Components:** Uses shadcn/ui. Refer to `src/components/ui` and shadcn/ui documentation for component usage.
+- **Forms:** Standard pattern is `react-hook-form` for state management and `zod` for schema definition and validation. See `src/components/AddKeyForm.tsx` for an example.
+- **Backend Interaction:** Frontend communicates with the Rust backend via Tauri's `invoke` command API (`@tauri-apps/api`).
+
+## User Preferences & Workflow
+
+- (To be determined based on future interactions)
+
+## Known Challenges & Considerations
+
+- Ensure type consistency between frontend (TypeScript/Zod) and backend (Rust) when defining data structures for keys.
+- Tauri-specific APIs and build process require familiarity with both web development and Rust environments.
+
+## Tool Usage Patterns
+
+- Use `replace_in_file` for targeted code changes.
+- Use `write_to_file` for creating new files or significant rewrites.
+- Use Memory Bank files (`read_file`) extensively at the start of tasks.
